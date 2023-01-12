@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: production
+  name: product-app
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: https://github.com/vfarcic/argocd-production.git
+    repoURL: https://github.com/agbodi/argo-playground.git
     targetRevision: HEAD
     path: helm
   destination:
